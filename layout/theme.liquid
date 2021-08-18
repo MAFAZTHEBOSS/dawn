@@ -102,7 +102,9 @@
     {%- endunless -%}
 
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
-  </head>
+  
+	{{ shop.metafields.loox["global_html_head"] }}
+</head>
 
   <body>
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
@@ -140,5 +142,7 @@
         unavailable: `{{ 'products.product.unavailable' | t }}`,
       }
     </script>
-  </body>
+  
+	{{ shop.metafields.loox["global_html_body"] }}
+</body>
 </html>
